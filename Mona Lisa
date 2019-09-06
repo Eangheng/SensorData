@@ -1,0 +1,54 @@
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+  pinMode(6, INPUT);  // Declare pin 1 as input
+  pinMode(7, INPUT);  // Declare pin 2 as input
+  pinMode(8, INPUT);  // Declare pin 3 as input
+  pinMode(9, INPUT);  // Declare pin 4 as input
+  pinMode(LED_BUILTIN, OUTPUT); // Set LED pin as output
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+
+  //Sensor 1
+  if (digitalRead(6) == HIGH) {
+    Serial.println("Motion Detected in Sensor 1");
+    digitalWrite(LED_BUILTIN, HIGH);
+  }
+  else {
+    Serial.println("Inactive");
+    digitalWrite(LED_BUILTIN, LOW);
+  }
+  delay(1000);
+
+  if (digitalRead(7) == HIGH) {
+    Serial.println("Motion Detected in Sensor 2");
+    digitalWrite(LED_BUILTIN, HIGH);
+  }
+  else {
+    Serial.println("Inactive");
+    digitalWrite(LED_BUILTIN, LOW);
+  }
+  delay(1000);
+
+  if (digitalRead(8) == HIGH) {
+    Serial.println("Motion Detected in Sensor 3");
+    digitalWrite(LED_BUILTIN, HIGH);
+  }
+  else {
+    Serial.println("Inactive");
+    digitalWrite(LED_BUILTIN, LOW);
+  }
+  delay(1000);
+
+  if (digitalRead(9) == HIGH) {
+    Serial.println("Motion Detected in Sensor 4");
+    digitalWrite(LED_BUILTIN, HIGH);
+  }
+  else {
+    Serial.println("Inactive");
+    digitalWrite(LED_BUILTIN, LOW);
+  }
+  delay(1000);
+}
